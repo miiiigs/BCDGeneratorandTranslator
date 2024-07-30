@@ -1,2 +1,2 @@
-# BCDGeneratorandTranslator
-BCD Converter
+# BCD Generator and Translator
+CSARCH2 Group 10 Simulation Project
