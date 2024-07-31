@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BCD Converter</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.6/dist/sweetalert2.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/noty@3.2.0/lib/noty.min.js"></script>
+    <script src="script.js"></script>
+    
+  </head>
+  <body>
+    <div class="title-header">
+        <h1>BCD Generator and Translator</h1>
+        <div id="nav-buttons">
+            <button onclick="showSection('bcd-generator')">BCD Generator</button>
+            <button onclick="showSection('bcd-translator')">BCD Translator</button>
+        </div>
+    </div>
+    
+    <div>
+        
+    
+      <div class="container" id="bcd-generator">
+        <div class="header">
+          <h2 id="title">BCD Generator</h2>
+          
+        </div>
+        <label for="decimal-input">Decimal:</label>
+        <input type="text" id="decimal-input" placeholder="Enter Decimal"/>
+        <br />
+        <button class="generate-button" onclick="generateBCD()">Generate BCD</button>
+        <br />
+        <label for="unpacked">Unpacked BCD:</label>
+        <input type="text" id="unpacked" onclick="clearInputs()"/>
+        <br />
+        <label for="packed" >Packed BCD:</label>
+        <input type="text" id="packed" onclick="clearInputs()"/>
+        <br />
+        <label for="densely-packed" >Densely-packed BCD:</label>
+        <input type="text" id="densely-packed" onclick="clearInputs()"/>
+        <br />
+        <button onclick="clearInputs()" id="gen-clear-btn">Clear</button>
+        <button onclick="generatorTextDownload()" id="gen-download-btn">Download Result</button>
+        
+
+      </div>
+
+      <div class="container hidden" id="bcd-translator" >
+        <div class="header">
+          <h2 id="title">BCD Translator</h2>
+          
+        </div>
+        <label for="bcd-input">Densely-packed BCD:</label>
+        <input type="text" id="bcd-input" placeholder="Enter 10-bit Densely-Packed BCD"/>
+        <br />
+        <button class="convert-button" onclick="translateBCD()">Translate BCD</button>
+        <br />
+        <label for="decimal-output">Decimal:</label>
+        <input type="text" id="decimal-output" />
+
+        <button onclick="clearInputs()" id="trans-clear-btn">Clear</button>
+        <button onclick="translatorTextDownload()" id="trans-download-btn">Download Result</button>
+        
+
+      </div>
+
+    
+    
+    
+      <div class="container members">
+        <h3>CSARCH2 S12 Group 10</h3>
+        <p>ANGELES • LEYSA • REFUERZO</p>
+     
+      </div>
+    
+    </div>
+  </body>
+</html>
